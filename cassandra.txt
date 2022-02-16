@@ -1,0 +1,16 @@
+# Abrir CMD ou PowerShell
+
+#puxar imagem do cassandra
+docker pull cassandra
+
+#consultando imagens instaladas
+docker images
+
+#criando um containner do cassandra
+docker run -d --name cassandra -p 9042:9042 cassandra
+
+#usando o containner (TODA VEZ QUE DAR START NO CONTAINER CASSANDRA, DEVE EXECUTAR OS 2 COMANDOS SEGUINTES)
+1) docker exec -it cassandra bash
+
+#entrando no prompt de comando do cassanda
+2) cqlsh

@@ -1,0 +1,34 @@
+# Abra o PowerShell ou cmd e insira o comando: 
+	- docker pull mysql (puxa imagem do mysql)
+
+# Inicie o servidor do mysql e faça login:
+	- Comando: docker run --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d -p 3306:3306 mysql
+
+# Usa o container e entra no prompt de comando do mysql: (TODA VEZ QUE DER START NO CONTAINER MYSQL DO CONTAINER, EXECUTAR ESSES COMANDOS)
+	- docker exec -it mysql bash
+	- mysql -u root -p
+	- A seguir adicione a senha: mysql (OBS.: não aparece o que você está digitando)
+
+----------------------------------------------------------------------------
+
+# Verifica ip config:
+	- docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql 
+		mysql é o nome do meu container
+
+
+# Verifica algumas coisas:
+	- Comando_1: docker ps (quais container's estão em execucação)
+	- Comando_2: docker ps -a(visualiza todos os container's em execução ou não)
+	- Comando_3: pwd (se está na pasta raiz)
+	- Comando_4: ls (visualiza a estrutura de arquivos do seu SO)
+	- Comando_5: mysql --help (visualiza todos os comandos disponíveis do mysql)
+
+# Pode executar as consultas
+
+
+Fontes:
+------------------------------------------------------------------------------------------
+Simplificado:
+https://hub.docker.com/_/mysql
+https://www.youtube.com/watch?v=skx_Oxdw9i0 (mostra de forma rápida como se entra no prompt de comandos do mysql)
+https://www.youtube.com/watch?v=1Zpr1vX0wqk (explica bem os comandos, mas não entra no prompt de comandos do mysql)

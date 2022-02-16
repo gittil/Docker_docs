@@ -1,0 +1,42 @@
+1) Abra o PowerShell ou cmd e insira o comando: 
+	- docker pull postgres (puxa imagem do postegre)
+
+2) Inicie o servidor do postgres e faça login:
+	- Comando: docker run --name postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
+
+3) Verificar se o container está funcionando:
+	- Comando: docker ps
+
+4) Usa o container: (TODA VEZ QUE DER START NO CONTAINER POSTGRES, EXECUTE OS COMANDOS DO TÓPICO 4 E 6)
+	- Comando: docker exec -it postgres bash
+
+5) Verifica algumas coisas:
+	- Comando_1: pwd (se está na pasta raiz)
+	- Comando_2: ls (visualiza a estrutura de arquivos do seu SO)
+	- Comando_3: psql --help (visualiza todos os comandos disponíveis do psql)
+
+
+6) Entra no prompt de comando do postgres:
+	- Comando: psql -U postgres
+	- Obs.: postgres (depois do "u") é o nome do seu username
+
+
+
+# Pode executar as consultas
+	- Comando_1: create database name-database;
+
+# Verifica algumas coisas:
+	- Comando_1: \du (qual atribuição do seu usuário - se é superusuário ou não)
+	- Comando_2: \l (list of databases)
+	- Comando_3: \c name-database (connect to database selected)
+
+
+Fontes:
+------------------------------------------------------------------------------------------
+Simplificado e objetivo:
+https://hub.docker.com/_/postgres
+https://www.youtube.com/watch?v=aHbE3pTyG-Q
+------------------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=vrglmtlPTek
+https://www.youtube.com/watch?v=DAWCBiNyh0A
+https://ichi.pro/pt/como-instalar-postgis-e-pgadmin4-com-docker-facilmente-69598658763759

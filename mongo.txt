@@ -1,0 +1,24 @@
+# Fonte para dúvidas:
+https://www.youtube.com/watch?v=D6Z3yVcKLH0&t=73s
+		=== E/OU ===
+https://www.thepolyglotdeveloper.com/2019/01/getting-started-mongodb-docker-container-deployment/
+		===  E ===
+https://hub.docker.com/_/mongo (site oficial da docker para criar imagem do Mongo)
+
+
+1) Abra o PowerShell ou cmd e insira o comando: 
+	- docker pull mongo (puxa imagem do mongo)
+
+2) Inicie o servidor do mongo e faça login:
+	- Comando: docker run -v ~/docker --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=hugo_pedra -e MONGO_INITDB_ROOT_PASSWORD=mongodb mongo
+	- Obs.: irá aparecer uma mensagem bem grande (NÃO SE PREOCUPE. Rs)
+
+
+# Abra um novo PowerShell()
+3) Usa o container: (TODA VEZ QUE DER START NO CONTAINER MONGO, EXECUTAR OS COMANDOS DOS TÓPICOS 3 E 4)
+	- Comando: docker exec -it mongodb bash
+
+4) Entra no prompt de comando do mongo:
+	- Comando: mongo
+
+5) Pode executar as consultas
