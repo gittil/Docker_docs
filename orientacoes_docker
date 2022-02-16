@@ -1,4 +1,3 @@
-#Daqui pra baixo é do docker
 #instale o docker pelo site oficial
 
 #Acesse o link abaixo e siga as etapas do um ao cinco, bem tranquilo e bastante explicativo, não tem erro.
@@ -11,10 +10,10 @@ docker pull cassandra
 docker images
 
 #criando um containner do cassandra
-docker run -d --name cassandra-node -p 9042:9042 cassandra
+docker run -d --name cassandra -p 9042:9042 cassandra
 
 #usando o containner
-docker exec -it cassandra-node bash
+docker exec -it cassandra bash
 
 #entrando no prompt de comando do cassanda
 cqlsh
