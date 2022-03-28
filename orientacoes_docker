@@ -1,7 +1,14 @@
 #instale o docker pelo site oficial
 
+https://www.docker.com/products/docker-desktop
+
+
+
 #Acesse o link abaixo e siga as etapas do um ao cinco, bem tranquilo e bastante explicativo, não tem erro.
 https://docs.microsoft.com/pt-br/windows/wsl/install-win10
+
+https://docs.microsoft.com/pt-br/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
 
 #puxar imagem do cassandra
 docker pull cassandra
@@ -9,8 +16,12 @@ docker pull cassandra
 #consultando imagens instaladas
 docker images
 
+#criar a pasta para arquivos persistentes
+sudo mkdir /var/lib/cassandra -p
+
+
 #criando um containner do cassandra
-docker run -d --name cassandra -p 9042:9042 cassandra
+docker run --name cassandra -p 9042:9042 -v /var/lib/cassandra:/var/lib/cassandra -d cassandra
 
 #usando o containner
 docker exec -it cassandra bash

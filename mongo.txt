@@ -10,7 +10,7 @@ https://hub.docker.com/_/mongo (site oficial da docker para criar imagem do Mong
 	- docker pull mongo (puxa imagem do mongo)
 
 2) Inicie o servidor do mongo e faça login:
-	- Comando: docker run -v ~/docker --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=hugo_pedra -e MONGO_INITDB_ROOT_PASSWORD=mongodb mongo
+	- Comando: docker run --name mongodb -p 27017:27017 -v /var/lib/mongodb:/data/db -e MONGO_INITDB_ROOT_USERNAME=douglas -e MONGO_INITDB_ROOT_PASSWORD=admin123 mongo
 	- Obs.: irá aparecer uma mensagem bem grande (NÃO SE PREOCUPE. Rs)
 
 
