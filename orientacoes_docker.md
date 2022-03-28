@@ -10,6 +10,9 @@ https://docs.microsoft.com/pt-br/windows/wsl/install-win10
 https://docs.microsoft.com/pt-br/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
 
 
+
+
+
 #puxar imagem do cassandra
 docker pull cassandra
 
